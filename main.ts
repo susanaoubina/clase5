@@ -19,7 +19,6 @@ namespace myTiles {
 . . . . . . . . . . . . . . . . 
 `
 }
-let mySprite: Sprite = null
 scene.setBackgroundImage(img`
 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 
 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 
@@ -165,8 +164,7 @@ tiles.setTilemap(tiles.createTilemap(
             [myTiles.tile0,sprites.castle.tilePath5,sprites.castle.tileGrass2,sprites.castle.tileGrass3,sprites.castle.tileDarkGrass3,sprites.castle.tileDarkGrass2,sprites.castle.tileGrass1,sprites.builtin.forestTiles0,sprites.builtin.crowd7,sprites.builtin.coral2,sprites.builtin.oceanSand11,sprites.dungeon.floorLight0,sprites.dungeon.doorLockedWest,sprites.dungeon.doorClosedEast,sprites.dungeon.doorOpenSouth,sprites.dungeon.darkGroundSouthWest1,sprites.builtin.forestTiles11,sprites.builtin.forestTiles7,sprites.builtin.forestTiles16,sprites.builtin.forestTiles26,sprites.builtin.forestTiles24,sprites.castle.rock2,sprites.castle.shrub,sprites.castle.rock0,sprites.dungeon.doorOpenEast,sprites.builtin.oceanDepths9,sprites.builtin.oceanDepths11,sprites.dungeon.collectibleRedCrystal,sprites.dungeon.collectibleInsignia,sprites.dungeon.collectibleBlueCrystal,sprites.dungeon.greenOuterNorthWest,sprites.dungeon.greenOuterEast2,sprites.dungeon.greenOuterSouth2,sprites.dungeon.purpleInnerNorthWest,sprites.dungeon.purpleInnerSouthWest,sprites.dungeon.purpleInnerNorthEast,sprites.dungeon.purpleInnerSouthEast,sprites.vehicle.roadVertical,sprites.vehicle.roadHorizontal,sprites.vehicle.roadTurn3,sprites.vehicle.roadTurn4,sprites.vehicle.roadIntersection4,sprites.vehicle.roadIntersection2,sprites.dungeon.chestOpen],
             TileScale.Sixteen
         ))
-mySprite.setPosition(0, 0)
-mySprite = sprites.create(img`
+let mySprite = sprites.create(img`
 . . . . . . . . . . . . . . . . 
 . . . . . . f f f f . . . . . . 
 . . . . f f f 2 2 f f f . . . . 
