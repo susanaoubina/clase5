@@ -142,7 +142,7 @@ scene.setBackgroundImage(img`
 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 
 `)
 tiles.setTilemap(tiles.createTilemap(
-            hex`10001000000000000000000000000000000000000202020202020d251c250a09090909090202070702020d251c250a091b1b09090202070702020d251c250a1a1b1b09090202020202020d251c250a1a090909090e0e0e250e0e182501250a0a0a0a250a2a262627262626282627262626262801121212121212122501251d1d1d1d1d132a2626262626262826252626262629010b0b0b0b0b0b0b2526250c0c0c0c0c0c08080820200826282b250c07070707070808080808080b252b250c19190707070808151508080b252b250c07072123070808151508080b252b272607072224070808080808080b252b250c07070707070808080808080b252b250c0707070707`,
+            hex`10001000000000000000000000000000000000000202020202020d251c250a09090909090202070702020d251c250a091b1b09090202070702020d251c250a1a1b1b09090202020202020d251c250a1a090909090e0e0e250e0e182501250a0a0a0a250a2a2626272626262826272626262628012e1212121212122501251d1d1d1d1d132a2626262626262826252626262629010b0b0b0b0b0b0b2526250c0c0c0c0c0c0808082c2c0826282b250c07070707070808080808080b252b250c19190707070808151508080b252b250c07072123070808151508080b252b272607072224070808080808080b252b250c07070707070808080808080b252b250c0707070707`,
             img`
 . . . . . . . . . . . . . . . . 
 . . . . . . . . . . . . . . . 2 
@@ -161,7 +161,7 @@ tiles.setTilemap(tiles.createTilemap(
 . . . . . . . . . . . . . . . 2 
 . . . . . . . . . . . . . . . 2 
 `,
-            [myTiles.tile0,sprites.castle.tilePath5,sprites.castle.tileGrass2,sprites.castle.tileGrass3,sprites.castle.tileDarkGrass3,sprites.castle.tileDarkGrass2,sprites.castle.tileGrass1,sprites.builtin.forestTiles0,sprites.builtin.crowd7,sprites.builtin.coral2,sprites.builtin.oceanSand11,sprites.dungeon.floorLight0,sprites.dungeon.doorLockedWest,sprites.dungeon.doorClosedEast,sprites.dungeon.doorOpenSouth,sprites.dungeon.darkGroundSouthWest1,sprites.builtin.forestTiles11,sprites.builtin.forestTiles7,sprites.builtin.forestTiles16,sprites.builtin.forestTiles26,sprites.builtin.forestTiles24,sprites.castle.rock2,sprites.castle.shrub,sprites.castle.rock0,sprites.dungeon.doorOpenEast,sprites.builtin.oceanDepths9,sprites.builtin.oceanDepths11,sprites.dungeon.collectibleRedCrystal,sprites.dungeon.collectibleInsignia,sprites.dungeon.collectibleBlueCrystal,sprites.dungeon.greenOuterNorthWest,sprites.dungeon.greenOuterEast2,sprites.dungeon.greenOuterSouth2,sprites.dungeon.purpleInnerNorthWest,sprites.dungeon.purpleInnerSouthWest,sprites.dungeon.purpleInnerNorthEast,sprites.dungeon.purpleInnerSouthEast,sprites.vehicle.roadVertical,sprites.vehicle.roadHorizontal,sprites.vehicle.roadTurn3,sprites.vehicle.roadTurn4,sprites.vehicle.roadIntersection4,sprites.vehicle.roadIntersection2,sprites.dungeon.chestOpen],
+            [myTiles.tile0,sprites.castle.tilePath5,sprites.castle.tileGrass2,sprites.castle.tileGrass3,sprites.castle.tileDarkGrass3,sprites.castle.tileDarkGrass2,sprites.castle.tileGrass1,sprites.builtin.forestTiles0,sprites.builtin.crowd7,sprites.builtin.coral2,sprites.builtin.oceanSand11,sprites.dungeon.floorLight0,sprites.dungeon.doorLockedWest,sprites.dungeon.doorClosedEast,sprites.dungeon.doorOpenSouth,sprites.dungeon.darkGroundSouthWest1,sprites.builtin.forestTiles11,sprites.builtin.forestTiles7,sprites.builtin.forestTiles16,sprites.builtin.forestTiles26,sprites.builtin.forestTiles24,sprites.castle.rock2,sprites.castle.shrub,sprites.castle.rock0,sprites.dungeon.doorOpenEast,sprites.builtin.oceanDepths9,sprites.builtin.oceanDepths11,sprites.dungeon.collectibleRedCrystal,sprites.dungeon.collectibleInsignia,sprites.dungeon.collectibleBlueCrystal,sprites.dungeon.greenOuterNorthWest,sprites.dungeon.greenOuterEast2,sprites.dungeon.greenOuterSouth2,sprites.dungeon.purpleInnerNorthWest,sprites.dungeon.purpleInnerSouthWest,sprites.dungeon.purpleInnerNorthEast,sprites.dungeon.purpleInnerSouthEast,sprites.vehicle.roadVertical,sprites.vehicle.roadHorizontal,sprites.vehicle.roadTurn3,sprites.vehicle.roadTurn4,sprites.vehicle.roadIntersection4,sprites.vehicle.roadIntersection2,sprites.dungeon.chestOpen,sprites.dungeon.hazardLava1,sprites.vehicle.roadTurn2,sprites.dungeon.hazardSpike],
             TileScale.Sixteen
         ))
 let mySprite = sprites.create(img`
@@ -182,6 +182,7 @@ let mySprite = sprites.create(img`
 . . . . f f f f f f f . . . . . 
 . . . . f f f . . . . . . . . . 
 `, SpriteKind.Player)
+mySprite.setPosition(8, 8)
 controller.moveSprite(mySprite, 50, 50)
 scene.cameraShake(4, 100)
 scene.cameraFollowSprite(mySprite)
